@@ -34,7 +34,7 @@ Abra, mude o número, salve. Muda no site inteiro de uma vez.
 ```js
 whatsapp: "5522992828220",              // só números: país + DDD + número
 whatsappVisivel: "+55 (22) 99282-8220", // como aparece escrito
-instagram: "naturaven.oroymd",          // sem o @
+instagram: "https://www.instagram.com/nordubenoroymiel?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",          // sem o @
 mostrarPrecos: true                     // false esconde todos os preços
 ```
 

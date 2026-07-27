@@ -17,7 +17,7 @@ const CONFIG = {
   whatsappVisivel: "+55 (22) 99282-8220",
 
   // ---- REDES ----------------------------------------------------
-  instagram: "naturaven.oroymd",          // sem o @
+  instagram: "https://www.instagram.com/nordubenoroymiel?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",          // sem o @
   email: "",                              // deixe "" se não quiser mostrar
 
   // ---- MARCA ----------------------------------------------------
