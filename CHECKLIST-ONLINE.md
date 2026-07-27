@@ -13,7 +13,7 @@ Dividido em: **o que trava a publicação**, **o que faz vender mais**,
 | 2 | **Fotos reais das peças** | ⚠️ provisório | Hoje o catálogo usa recortes das artes de divulgação. Precisa de foto de cada peça em fundo liso. |
 | 3 | **Preços** | ⚠️ inventados | Os valores em `produtos.js` são exemplo. Coloque os reais — ou `preco: ""` para "Consultar valor". |
 | 4 | **História real da artesã** | ⚠️ rascunho | Em `posts.js` o 1º post tem um trecho em itálico pedindo para trocar. Nome, cidade, há quanto tempo trabalha, quem ensinou. |
-| 5 | **Instagram confere?** | ⚠️ verificar | Está `https://www.instagram.com/nordubenoroymiel?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==`. Se o perfil for outro, corrija no `config.js`. |
+| 5 | **Instagram confere?** | ⚠️ verificar | Está `@nordubenoroymiel`. Se o perfil for outro, corrija no `config.js`. |
 
 ---
 
@@ -28,7 +28,7 @@ Dividido em: **o que trava a publicação**, **o que faz vender mais**,
 | 10 | **Como cuidar da peça** | Fibra natural + pedra: não molhar, guardar seco. Reduz devolução e reclamação. |
 | 11 | **Prazo de produção** | "Peça única, produção em 7 dias" — evita cliente achando que é pronta-entrega. |
 | 12 | **Foto ou vídeo da artesã trabalhando** | É o que mais vende artesanato. Uma foto das mãos costurando vale mais que 3 posts. |
-| 13 | https://www.instagram.com/nordubenoroymiel?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw== | O site só existe se alguém chegar nele. |
+| 13 | site do instagram| O site só existe se alguém chegar nele. |
 
 ---
 
