@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fios da Terra — Artesanato em Fibra Natural</title>
+<meta name="description" content="Colares, bolsas e caixas feitos à mão com fibra de bananeira, linho e pedras naturais. Coleção autoral, peças únicas. Fios da Terra.">
+<meta name="theme-color" content="#1F4A32">
+
+<!-- Como o link aparece quando compartilhado no WhatsApp / Instagram -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Fios da Terra — Artesanato em Fibra Natural">
+<meta property="og:description" content="Peças únicas em fibra de bananeira, linho e pedras naturais.">
+<meta property="og:image" content="fotos/colar-linho-pedras.jpg">
+<meta property="og:locale" content="pt_BR">
+
+<link rel="icon" href="assets/img/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/estilo.css">
+</head>
+<body>
+
+<!-- ===================== TOPO ===================== -->
+<header class="topo">
+  <div class="container topo-inner">
+    <a class="logo" href="index.html">
+      <img src="assets/img/logo.jpg" alt="Fios da Terra">
+      <span class="logo-txt">
+        <strong data-marca>Fios da Terra</strong>
+        <span>Fibra natural</span>
+      </span>
+    </a>
+
+    <nav class="menu">
+      <a href="#catalogo" data-i18n="nav.catalogo">Catálogo</a>
+      <a href="#sobre" data-i18n="nav.sobre">Sobre</a>
+      <a href="blog.html" data-i18n="nav.blog">Blog</a>
+      <a href="#contato" data-i18n="nav.contato">Contato</a>
+    </nav>
+
+    <div class="idiomas" role="group" aria-label="Idioma">
+      <button data-lang="pt" type="button">PT</button>
+      <button data-lang="es" type="button">ES</button>
+      <button data-lang="en" type="button">EN</button>
+    </div>
+
+    <button class="menu-btn" type="button" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M4 7h16M4 12h16M4 17h16"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="tag" data-i18n="hero.tag">Fibra natural · Comunidade sustentável</span>
+      <h1 data-i18n="hero.titulo">Sustentabilidade em Texturas</h1>
+      <p data-i18n="hero.sub">Colares, bolsas e caixas feitos à mão.</p>
+      <div class="botoes">
+        <a class="btn btn-primario" href="#catalogo" data-i18n="hero.btn">Ver o catálogo</a>
+        <a class="btn btn-wpp" data-wpp target="_blank" rel="noopener" href="#">
+          <span data-ico="wpp"></span><span data-i18n="hero.btn2">Falar no WhatsApp</span>
+        </a>
+      </div>
+    </div>
+    <div class="hero-fotos">
+      <img class="alta" src="fotos/colar-linho-pedras.jpg" alt="Colar de linho com pedras naturais">
+      <img src="fotos/caixas-fibra-banana.jpg" alt="Caixas de fibra de bananeira">
+      <img src="fotos/bolsa-colecao-autoral.jpg" alt="Bolsa da coleção autoral">
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MATERIAIS ===================== -->
+<section class="materiais">
+  <div class="container">
+    <div class="sec-cabeca">
+      <h2 data-i18n="mat.titulo">Do que são feitas as peças</h2>
+    </div>
+    <div class="mat-grid">
+      <div class="mat-item">
+        <div class="mat-ico" data-ico="folha"></div>
+        <h3 data-i18n="mat.1t">Fibra de bananeira</h3>
+        <p data-i18n="mat.1d"></p>
+      </div>
+      <div class="mat-item">
+        <div class="mat-ico" data-ico="fio"></div>
+        <h3 data-i18n="mat.2t">Fio de linho</h3>
+        <p data-i18n="mat.2d"></p>
+      </div>
+      <div class="mat-item">
+        <div class="mat-ico" data-ico="pedra"></div>
+        <h3 data-i18n="mat.3t">Pedras naturais</h3>
+        <p data-i18n="mat.3d"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CATÁLOGO ===================== -->
+<section class="catalogo" id="catalogo">
+  <div class="container">
+    <div class="sec-cabeca">
+      <h2 data-i18n="cat.titulo">Coleção Autoral</h2>
+      <p data-i18n="cat.sub"></p>
+    </div>
+
+    <div class="filtros">
+      <button type="button" class="ativo" data-cat="todos"   data-i18n="filtro.todos">Todos</button>
+      <button type="button" data-cat="colares" data-i18n="filtro.colares">Colares</button>
+      <button type="button" data-cat="bolsas"  data-i18n="filtro.bolsas">Bolsas</button>
+      <button type="button" data-cat="caixas"  data-i18n="filtro.caixas">Caixas</button>
+      <button type="button" data-cat="outros"  data-i18n="filtro.outros">Outros</button>
+    </div>
+
+    <!-- As peças são geradas a partir de assets/js/produtos.js -->
+    <div class="grade" id="grade"></div>
+  </div>
+</section>
+
+<!-- ===================== SOBRE ===================== -->
+<section class="sobre" id="sobre">
+  <div class="container sobre-grid">
+    <div>
+      <h2 data-i18n="sobre.titulo">Artigianato Nature</h2>
+      <p data-i18n="sobre.p1"></p>
+      <p data-i18n="sobre.p2"></p>
+      <a class="btn btn-linha" href="blog.html" data-i18n="sobre.btn">Ler a história completa</a>
+    </div>
+    <img src="fotos/caixas-fibra-banana.jpg" alt="Caixas artesanais de fibra de bananeira">
+  </div>
+</section>
+
+<!-- ===================== CONTATO ===================== -->
+<section class="contato" id="contato">
+  <div class="container">
+    <h2 data-i18n="contato.titulo">Vamos conversar</h2>
+    <p data-i18n="contato.sub"></p>
+    <a class="btn btn-wpp" data-wpp target="_blank" rel="noopener" href="#">
+      <span data-ico="wpp"></span><span data-i18n="contato.btn">Abrir conversa no WhatsApp</span>
+    </a>
+    <div class="contato-links" id="contato-links"></div>
+  </div>
+</section>
+
+<!-- ===================== RODAPÉ ===================== -->
+<footer class="rodape">
+  <div class="container rodape-inner">
+    <span>© <span data-ano></span> <span data-marca></span>. <span data-i18n="rodape.dir"></span></span>
+    <span><span data-i18n="rodape.feito"></span> <span data-cidade></span></span>
+  </div>
+</footer>
+
+<!-- Botão flutuante de WhatsApp -->
+<a class="wpp-flutua" data-wpp target="_blank" rel="noopener" href="#" aria-label="WhatsApp">
+  <span data-ico="wpp"></span>
+</a>
+
+<!-- Visualizador de foto ampliada -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-fechar" type="button" aria-label="Fechar">&times;</button>
+  <img src="" alt="">
+</div>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/traducoes.js"></script>
+<script src="assets/js/produtos.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

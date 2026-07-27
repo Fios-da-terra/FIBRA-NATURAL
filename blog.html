@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog — Fios da Terra</title>
+<meta name="description" content="A história da artesã por trás de Fios da Terra: fibra de bananeira, linho e pedras naturais.">
+<meta name="theme-color" content="#1F4A32">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Do ateliê — Fios da Terra">
+<meta property="og:description" content="A história por trás de cada peça.">
+<meta property="og:image" content="fotos/colar-linho-pedras.jpg">
+
+<link rel="icon" href="assets/img/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/estilo.css">
+</head>
+<body>
+
+<header class="topo">
+  <div class="container topo-inner">
+    <a class="logo" href="index.html">
+      <img src="assets/img/logo.jpg" alt="Fios da Terra">
+      <span class="logo-txt">
+        <strong data-marca>Fios da Terra</strong>
+        <span>Fibra natural</span>
+      </span>
+    </a>
+
+    <nav class="menu">
+      <a href="index.html#catalogo" data-i18n="nav.catalogo">Catálogo</a>
+      <a href="index.html#sobre" data-i18n="nav.sobre">Sobre</a>
+      <a href="blog.html" data-i18n="nav.blog">Blog</a>
+      <a href="index.html#contato" data-i18n="nav.contato">Contato</a>
+    </nav>
+
+    <div class="idiomas" role="group" aria-label="Idioma">
+      <button data-lang="pt" type="button">PT</button>
+      <button data-lang="es" type="button">ES</button>
+      <button data-lang="en" type="button">EN</button>
+    </div>
+
+    <button class="menu-btn" type="button" aria-label="Menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M4 7h16M4 12h16M4 17h16"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<section class="blog">
+  <div class="container">
+    <div class="sec-cabeca">
+      <h2 data-i18n="blog.titulo">Do ateliê</h2>
+      <p data-i18n="blog.sub"></p>
+    </div>
+
+    <!-- Os textos vêm de assets/js/posts.js -->
+    <div class="posts" id="posts"></div>
+
+    <p style="text-align:center;margin-top:44px">
+      <a class="btn btn-linha" href="index.html" data-i18n="blog.voltar">← Voltar ao catálogo</a>
+    </p>
+  </div>
+</section>
+
+<section class="contato" id="contato">
+  <div class="container">
+    <h2 data-i18n="contato.titulo">Vamos conversar</h2>
+    <p data-i18n="contato.sub"></p>
+    <a class="btn btn-wpp" data-wpp target="_blank" rel="noopener" href="#">
+      <span data-ico="wpp"></span><span data-i18n="contato.btn">Abrir conversa no WhatsApp</span>
+    </a>
+    <div class="contato-links" id="contato-links"></div>
+  </div>
+</section>
+
+<footer class="rodape">
+  <div class="container rodape-inner">
+    <span>© <span data-ano></span> <span data-marca></span>. <span data-i18n="rodape.dir"></span></span>
+    <span><span data-i18n="rodape.feito"></span> <span data-cidade></span></span>
+  </div>
+</footer>
+
+<a class="wpp-flutua" data-wpp target="_blank" rel="noopener" href="#" aria-label="WhatsApp">
+  <span data-ico="wpp"></span>
+</a>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/traducoes.js"></script>
+<script src="assets/js/posts.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
