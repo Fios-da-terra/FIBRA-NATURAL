@@ -11,10 +11,10 @@ const CONFIG = {
   // Formato: código do país + DDD + número, SÓ NÚMEROS, sem + sem espaço.
   // Brasil (92 = Manaus): 55 + 92 + 992828220
   // ⚠️ CONFIRA ESTE NÚMERO ANTES DE PUBLICAR.
-  whatsapp: "5592992828220",
+  whatsapp: "5522992828220",
 
   // Como o número aparece escrito na tela (pode ter espaços e traços)
-  whatsappVisivel: "+55 (92) 99282-8220",
+  whatsappVisivel: "+55 (22) 99282-8220",
 
   // ---- REDES ----------------------------------------------------
   instagram: "naturaven.oroymd",          // sem o @

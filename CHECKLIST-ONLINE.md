@@ -9,7 +9,7 @@ Dividido em: **o que trava a publicação**, **o que faz vender mais**,
 
 | # | Item | Situação | O que fazer |
 |---|---|---|---|
-| 1 | **Número de WhatsApp confirmado** | ⚠️ presumido | O material diz `992828220`. Montei como **+55 (92) 99282-8220**. Confirme DDD e país e ajuste `assets/js/config.js`. Teste clicando no botão. |
+| 1 | **Número de WhatsApp confirmado** | ⚠️ presumido | O material diz `992828220`. Montei como **+55 (22) 99282-8220**. Confirme DDD e país e ajuste `assets/js/config.js`. Teste clicando no botão. |
 | 2 | **Fotos reais das peças** | ⚠️ provisório | Hoje o catálogo usa recortes das artes de divulgação. Precisa de foto de cada peça em fundo liso. |
 | 3 | **Preços** | ⚠️ inventados | Os valores em `produtos.js` são exemplo. Coloque os reais — ou `preco: ""` para "Consultar valor". |
 | 4 | **História real da artesã** | ⚠️ rascunho | Em `posts.js` o 1º post tem um trecho em itálico pedindo para trocar. Nome, cidade, há quanto tempo trabalha, quem ensinou. |
