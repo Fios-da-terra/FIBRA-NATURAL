@@ -9,7 +9,7 @@ const CONFIG = {
 
   // ---- WHATSAPP -------------------------------------------------
   // Formato: código do país + DDD + número, SÓ NÚMEROS, sem + sem espaço.
-  // Brasil (92 = Manaus): 55 + 92 + 992828220
+  // Brasil (22): 55 + 22 + 992828220
   // ⚠️ CONFIRA ESTE NÚMERO ANTES DE PUBLICAR.
   whatsapp: "5522992828220",
 
