@@ -1,4 +1,4 @@
-Fibras Naturais: Arte, Sustentabilidade e Design
+Fibras Naturais: Arte, Sustentabilidade, Meio ambiente e Designer
 
 O projeto Fibras Naturais é dedicado à transformação de resíduos vegetais em design de alto valor. Nosso trabalho nasce na Região dos Lagos e tem o mundo como horizonte.
 
