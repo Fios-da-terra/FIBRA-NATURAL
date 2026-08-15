@@ -17,7 +17,7 @@ const CONFIG = {
   whatsappVisivel: "+55 (22) 99282-8220",
 
   // ---- REDES ----------------------------------------------------
-  instagram: "nordubeoroymiel",           // SEM o @ — o site já põe o @ sozinho
+  instagram: "nordubenoroymiel",           // SEM o @ — o site já põe o @ sozinho
   email: "",                              // deixe "" se não quiser mostrar
 
   // ---- MARCA ----------------------------------------------------
