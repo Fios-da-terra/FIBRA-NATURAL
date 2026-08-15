@@ -34,7 +34,7 @@ Abra, mude o número, salve. Muda no site inteiro de uma vez.
 ```js
 whatsapp: "5522992828220",              // só números: país + DDD + número
 whatsappVisivel: "+55 (22) 99282-8220", // como aparece escrito
-instagram: "@nordubenoroymiel",          // sem o @
+instagram: "nordubenoroymiel",          // sem o @
 mostrarPrecos: true                     // false esconde todos os preços
 ```
 
