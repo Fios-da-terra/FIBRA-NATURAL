@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Joke Generator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+
+        .joke-box {
+            background: #f8f9fa;
+            border-left: 5px solid #667eea;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            min-height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .setup {
+            font-size: 1.2em;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .punchline {
+            font-size: 1.1em;
+            color: #667eea;
+            font-weight: 700;
+            font-style: italic;
+        }
+
+        .joke-type {
+            font-size: 0.9em;
+            color: #999;
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        button {
+            flex: 1;
+            min-width: 150px;
+            padding: 12px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-joke {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-joke:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-multiple {
+            background: #764ba2;
+            color: white;
+        }
+
+        .btn-multiple:hover {
+            background: #663a8a;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(118, 75, 162, 0.4);
+        }
+
+        .loading {
+            color: #999;
+            font-style: italic;
+        }
+
+        .multiple-jokes {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .joke-item {
+            background: #f8f9fa;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+
+        .joke-item-setup {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .joke-item-punchline {
+            color: #667eea;
+            font-weight: 700;
+            font-size: 0.95em;
+        }
+
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border: 1px solid #f5c6cb;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            button {
+                min-width: 120px;
+                padding: 10px 15px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>😂 Joke Generator 😂</h1>
+        <p class="subtitle">Get random jokes instantly!</p>
+
+        <div id="jokeContainer" class="joke-box" style="display: none;">
+            <div class="setup" id="jokeSetup"></div>
+            <div class="punchline" id="jokePunchline"></div>
+            <div class="joke-type" id="jokeType"></div>
+        </div>
+
+        <div id="multipleJokesContainer" class="multiple-jokes" style="display: none;"></div>
+
+        <div id="errorContainer" class="error" style="display: none;"></div>
+
+        <div id="loadingContainer" class="loading" style="display: none;">
+            Loading joke... 😄
+        </div>
+
+        <div class="button-group">
+            <button class="btn-joke" onclick="fetchAndDisplayJoke()">Get Random Joke</button>
+            <button class="btn-multiple" onclick="fetchAndDisplayMultiple()">Get 5 Jokes</button>
+        </div>
+    </div>
+
+    <script>
+        const API_URL = 'https://official-joke-api.appspot.com';
+
+        async function fetchAndDisplayJoke() {
+            showLoading(true);
+            hideError();
+            document.getElementById('multipleJokesContainer').style.display = 'none';
+
+            try {
+                const response = await fetch(`${API_URL}/random_joke`);
+                
+                if (!response.ok) {
+                    throw new Error(`API error: ${response.status}`);
+                }
+
+                const joke = await response.json();
+                displayJoke(joke);
+            } catch (error) {
+                showError(`Error fetching joke: ${error.message}`);
+            } finally {
+                showLoading(false);
+            }
+        }
+
+        async function fetchAndDisplayMultiple() {
+            showLoading(true);
+            hideError();
+            document.getElementById('jokeContainer').style.display = 'none';
+
+            try {
+                const response = await fetch(`${API_URL}/jokes/random/5`);
+                
+                if (!response.ok) {
+                    throw new Error(`API error: ${response.status}`);
+                }
+
+                const jokes = await response.json();
+                displayMultipleJokes(jokes);
+            } catch (error) {
+                showError(`Error fetching jokes: ${error.message}`);
+            } finally {
+                showLoading(false);
+            }
+        }
+
+        function displayJoke(joke) {
+            document.getElementById('jokeSetup').textContent = joke.setup;
+            document.getElementById('jokePunchline').textContent = joke.punchline;
+            document.getElementById('jokeType').textContent = `Type: ${joke.type}`;
+            document.getElementById('jokeContainer').style.display = 'flex';
+        }
+
+        function displayMultipleJokes(jokes) {
+            const container = document.getElementById('multipleJokesContainer');
+            container.innerHTML = '<h3 style="margin-bottom: 15px; color: #333;">5 Random Jokes 🎭</h3>';
+            
+            jokes.forEach((joke, index) => {
+                const jokeDiv = document.createElement('div');
+                jokeDiv.className = 'joke-item';
+                jokeDiv.innerHTML = `
+                    <div class="joke-item-setup">${index + 1}. ${joke.setup}</div>
+                    <div class="joke-item-punchline">→ ${joke.punchline}</div>
+                `;
+                container.appendChild(jokeDiv);
+            });
+            
+            container.style.display = 'block';
+        }
+
+        function showLoading(show) {
+            document.getElementById('loadingContainer').style.display = show ? 'block' : 'none';
+        }
+
+        function showError(message) {
+            const errorContainer = document.getElementById('errorContainer');
+            errorContainer.textContent = message;
+            errorContainer.style.display = 'block';
+        }
+
+        function hideError() {
+            document.getElementById('errorContainer').style.display = 'none';
+        }
+
+        // Load a joke when the page loads
+        window.addEventListener('load', fetchAndDisplayJoke);
+    </script>
+</body>
+</html>
